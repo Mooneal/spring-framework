@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -42,7 +42,6 @@ import static org.mockito.Mockito.*;
  *
  * @author Sebastien Deleuze
  */
-@Ignore  // for JDK 9 compatibility, see KT-18833
 public class KotlinScriptTemplateTests {
 
 	private WebApplicationContext webAppContext;
@@ -57,7 +56,7 @@ public class KotlinScriptTemplateTests {
 		this.servletContext.setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, this.webAppContext);
 	}
 
-
+	@Ignore
 	@Test
 	public void renderTemplateWithFrenchLocale() throws Exception {
 		Map<String, Object> model = new HashMap<>();
@@ -67,6 +66,7 @@ public class KotlinScriptTemplateTests {
 		assertEquals("<html><body>\n<p>Bonjour Foo</p>\n</body></html>", response.getContentAsString());
 	}
 
+	@Ignore
 	@Test
 	public void renderTemplateWithEnglishLocale() throws Exception {
 		Map<String, Object> model = new HashMap<>();
@@ -76,6 +76,7 @@ public class KotlinScriptTemplateTests {
 		assertEquals("<html><body>\n<p>Hello Foo</p>\n</body></html>", response.getContentAsString());
 	}
 
+	@Ignore
 	@Test
 	public void renderTemplateWithoutRenderFunction() throws Exception {
 		Map<String, Object> model = new HashMap<>();
